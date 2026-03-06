@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
-    <application
-        android:label="智辨养生"
-        android:name="${applicationName}"
-        android:icon="@drawable/launch_background"
-        
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.Light.NoTitleBar"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-            android:windowSoftInputMode="adjustResize"
-            android:hardwareAccelerated="true">
-            
+    <application android:label="智辨养生" android:name="${applicationName}">
+        <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTop" android:theme="@android:style/Theme.Light.NoTitleBar" android:configChanges="orientation|keyboardHidden|keyboard|screenSize" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="flutterEmbedding"
-            android:value="2"/>
+        <meta-data android:name="flutterEmbedding" android:value="2"/>
     </application>
 </manifest>
