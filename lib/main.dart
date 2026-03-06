@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,12 +19,6 @@ class ZhiBianYangShengApp extends StatelessWidget {
     return MaterialApp(
       title: '智辨养生',
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [Locale('zh', 'CN')],
       locale: const Locale('zh', 'CN'),
       theme: ThemeData(
         useMaterial3: true,
@@ -85,7 +78,6 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 
-// ============ 首页 ============
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -227,7 +219,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// ============ 诊疗页 ============
 class DiagnosisPage extends StatelessWidget {
   const DiagnosisPage({super.key});
 
@@ -302,16 +293,16 @@ class DiagnosisPage extends StatelessWidget {
       child: Container(
         height: 150,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.surfaceContainerHighest,
+          color: Colors.grey.shade200,
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Theme.of(context).colorScheme.outline.withOpacity(0.3)),
+          border: Border.all(color: Colors.grey.shade300),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.camera_alt, size: 40, color: Theme.of(context).colorScheme.outline),
+            Icon(Icons.camera_alt, size: 40, color: Colors.grey.shade600),
             const SizedBox(height: 8),
-            Text(title, style: TextStyle(color: Theme.of(context).colorScheme.outline)),
+            Text(title, style: TextStyle(color: Colors.grey.shade600)),
           ],
         ),
       ),
@@ -319,7 +310,6 @@ class DiagnosisPage extends StatelessWidget {
   }
 }
 
-// ============ 健康页 ============
 class HealthPage extends StatelessWidget {
   const HealthPage({super.key});
 
@@ -388,7 +378,7 @@ class HealthPage extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
-                    Icon(Icons.inbox, size: 48, color: Theme.of(context).colorScheme.outline),
+                    Icon(Icons.inbox, size: 48, color: Colors.grey.shade400),
                     const SizedBox(height: 8),
                     const Text('暂无今日记录'),
                   ],
@@ -402,7 +392,6 @@ class HealthPage extends StatelessWidget {
   }
 }
 
-// ============ 食材页 ============
 class IngredientsPage extends StatelessWidget {
   const IngredientsPage({super.key});
 
@@ -434,9 +423,9 @@ class IngredientsPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, size: 64, color: Theme.of(context).colorScheme.outline),
+          Icon(icon, size: 64, color: Colors.grey.shade400),
           const SizedBox(height: 16),
-          Text(text, style: TextStyle(color: Theme.of(context).colorScheme.outline)),
+          Text(text, style: TextStyle(color: Colors.grey.shade600)),
         ],
       ),
     );
